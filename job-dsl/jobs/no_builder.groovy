@@ -1,6 +1,6 @@
 freeStyleJob('test-job') {
     scm {
-        git 'git@github.com:rypcarr/jenkins-dsl-demo.git'
+        git 'https://github.com/rypcarr/jenkins-dsl-demo.git'
     }
 
     triggers {
