@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://repo.jenkins-ci.org/releases/'
+    }
+}
+
+dependencies {
+    compile 'org.jenkins-ci.plugins:job-dsl-core:1.64'
+    compile 'org.testng:testng:6.11'
+}
+
+sourceSets {
+    jobs {
+        groovy {
+            srcDirs 'job-dsl/src/main/groovy', 'jobs'
+        }
+    }
+}
